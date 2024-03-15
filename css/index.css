@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0; /* Updated padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensure the navbar stays above other content */
+}
+
+.logo img {
+    height: 40px; /* Adjust according to your logo size */
+    margin-left: 20px; /* Add margin to the left of the logo */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline; /* Display the list items inline (inline adalah sebaris ) */
+    margin-right: 20px;
+}
+
+.nav-links li:first-child{
+    margin-left: 4em;
+}
+
+.nav-links li:last-child { 
+    margin-right: 4em;
+}
+
+.nav-links li a {
+    color:black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 20px; /* Added padding */
+    margin: 0.2em;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.nav-links li a:hover {
+    color: #e01252;
+    font-size: 1.5em;
+}
+
+/* Body */
+
+.container {
+    margin-left: 3em;
+    margin-right: 3em;
+    max-height: 150vh;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    margin-right: 3em;
+    font-family: 'Work Sans', sans-serif; /*sans serif untuk  */
+}
+
+#best-prod {
+    background-color: #e01252;
+    /* Latar belakang warna merah untuk kontainer */
+    margin-top: 5em;
+}
+
+#content-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Mengatur tata letak elemen secara horizontal dengan h1 dan p di sebelah kiri */
+    align-items: center;
+    /* Pusatkan vertikal elemen dalam wrapper */
+}
+
+#best-prod-text {
+    flex: 1;
+    /* Elemen ini akan mengambil sebagian besar ruang, sehingga gambar akan berada di sampingnya */
+    text-align: right;
+    color: #fff;
+}
+
+#desc-best-prod {
+    text-align: right;
+    margin-right: 7em;
+    /* Mengatur teks dalam elemen #desc-best-prod menjadi kanan */
+    font-family: 'Work Sans', sans-serif;
+}
+
+#img-best-prod {
+    flex-shrink: 0;
+    /* Mencegah gambar agar tidak mengecil ketika layar diperkecil */
+    margin-right: 20px;
+    /* Jarak antara gambar dan teks */
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+@media (max-width: 768px) {
+    /* Untuk layar dengan lebar kurang dari atau sama dengan 768px */
+    #content-wrapper {
+        flex-direction: column;
+        /* Tata letak vertikal untuk layar yang lebih kecil */
+    }
+    #best-prod-text, #img-best-prod {
+        margin: 0;
+    }
+    #img-best-prod {
+        margin-top: 20px;
+        /* Tambahkan jarak antara gambar dan teks ketika tata letak vertikal */
+    }
+}
+
+
+
