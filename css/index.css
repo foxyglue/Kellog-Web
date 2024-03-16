@@ -14,6 +14,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 1000; /* Ensure the navbar stays above other content */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the navbar */
 }
 
 .logo img {
@@ -78,7 +79,7 @@ body {
 }
 
 #content-wrapper {
-    display: flex;
+    display: flex; /* Tampilkan elemen dalam wrapper dalam satu baris */
     flex-direction: row-reverse;
     /* Mengatur tata letak elemen secara horizontal dengan h1 dan p di sebelah kiri */
     align-items: center;
@@ -94,9 +95,10 @@ body {
 
 #desc-best-prod {
     text-align: right;
-    margin-right: 7em;
+    margin-right: 5em;
     /* Mengatur teks dalam elemen #desc-best-prod menjadi kanan */
     font-family: 'Work Sans', sans-serif;
+    font-size: 1.5em;
 }
 
 #img-best-prod {
@@ -106,6 +108,7 @@ body {
     /* Jarak antara gambar dan teks */
     margin-top: 3em;
     margin-bottom: 3em;
+    margin-left: 3em;
 }
 
 @media (max-width: 768px) {
@@ -123,5 +126,107 @@ body {
     }
 }
 
+.best-recipe {
+    background-color: #e01252;
+    margin-top: 0%;
+}
 
+.recipe-img-name{
+    display: block;
+    margin-top: 2em;
+    margin-right: 2em;
+}
 
+#img-best-recipe {
+    margin-top: 3em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+.recipe-name {
+    text-align: center;
+    color: black;
+}
+
+#best-recipe-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 3em;
+}
+
+#desc-best-recipe {
+    text-align: left;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-right: 3em;
+}
+
+/* footer */
+.footer {
+    margin-top: 3em;
+    background-color: black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.foot-logo img {
+    width: 21vw;
+    height: 4.3vw;
+}
+
+.foot-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 1vh;
+}
+
+.foot-social {
+    width: 20vw;
+    color: white;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 2em;
+    margin-left: 2.5vw;
+    margin-top: 2%;
+}
+
+.foot-directory{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    margin-left: 10vw;
+    font-family: "Work Sans", sans-serif;
+}
+
+.foot-directory :last-child{
+    margin-right: 2vw;
+}
+
+.foot-directory h3 a{
+    margin-bottom: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.foot-directory h4 a{
+    margin-bottom: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.foot-rights{
+    text-align: center;
+    margin-top: 1em;
+    font-family: "Work Sans", sans-serif;
+    color: white;
+    font-weight: 600;
+}
