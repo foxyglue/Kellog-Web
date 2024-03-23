@@ -3,6 +3,19 @@ body {
     font-family: Arial, sans-serif;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -59,107 +72,88 @@ body {
 
 /* Body */
 
+.main-body {
+    margin-left: 7em;
+    margin-right: 7em;
+    height: auto;
+    background-color: #fff;
+}
+
 .container {
-    margin-left: 3em;
-    margin-right: 3em;
     max-height: 150vh;
 }
 
-.section-title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    margin-right: 3em;
-    font-family: 'Work Sans', sans-serif; /*sans serif untuk  */
-}
-
-#best-prod {
-    background-color: #e01252;
-    /* Latar belakang warna merah untuk kontainer */
+#about-us {
     margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center
 }
 
-#content-wrapper {
-    display: flex; /* Tampilkan elemen dalam wrapper dalam satu baris */
-    flex-direction: row-reverse;
-    /* Mengatur tata letak elemen secara horizontal dengan h1 dan p di sebelah kiri */
-    align-items: center;
-    /* Pusatkan vertikal elemen dalam wrapper */
-}
-
-#best-prod-text {
-    flex: 1;
-    /* Elemen ini akan mengambil sebagian besar ruang, sehingga gambar akan berada di sampingnya */
-    text-align: right;
-    color: #fff;
-}
-
-#desc-best-prod {
-    text-align: right;
-    margin-right: 5em;
-    /* Mengatur teks dalam elemen #desc-best-prod menjadi kanan */
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1.5em;
-}
-
-#img-best-prod {
-    flex-shrink: 0;
-    /* Mencegah gambar agar tidak mengecil ketika layar diperkecil */
-    margin-right: 20px;
-    /* Jarak antara gambar dan teks */
-    margin-top: 3em;
-    margin-bottom: 3em;
-    margin-left: 3em;
-}
-
-@media (max-width: 768px) {
-    /* Untuk layar dengan lebar kurang dari atau sama dengan 768px */
-    #content-wrapper {
-        flex-direction: column;
-        /* Tata letak vertikal untuk layar yang lebih kecil */
-    }
-    #best-prod-text, #img-best-prod {
-        margin: 0;
-    }
-    #img-best-prod {
-        margin-top: 20px;
-        /* Tambahkan jarak antara gambar dan teks ketika tata letak vertikal */
-    }
-}
-
-.best-recipe {
-    background-color: #e01252;
-    margin-top: 0%;
-}
-
-.recipe-img-name{
-    display: block;
-    margin-top: 2em;
-    margin-right: 2em;
-}
-
-#img-best-recipe {
-    margin-top: 3em;
-    margin-bottom: 1em;
-    margin-left: 1em;
-}
-
-.recipe-name {
+.subtopic{
+    color: #e01252;
     text-align: center;
-    color: black;
+    margin-top: 3vh;
+    margin-bottom: 1em;
 }
 
-#best-recipe-text {
+.subtopic h2 {
+    font-size: 2em;
+}
+
+#sub-about{
+    border-bottom: 10px solid black;
+    margin-top: 2vh;
+}
+
+#about-us h1 {
+    color: #e01252;
+    margin-bottom: 4vh;
+}
+
+#history {
+    margin-top: 10vh;
+}
+
+.hist-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hist-text {
+    width: 50%;
+    text-align: left;
+}
+
+.hist-img-sub {
     flex: 1;
-    text-align: left;
-    margin-left: 3em;
+    align-items: center;
+    margin-left: 5em;
 }
 
-#desc-best-recipe {
-    text-align: left;
+.hist-img img{
+    align-items: center;
+}
+
+.img-sub {
+    align-items: center;
+}
+
+.img-sub p {
+    font-size: 1em;
+}
+
+.subtopic-text {
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+}
+
+.subtopic-text li {
     font-family: 'Work Sans', sans-serif;
-    font-size: 1.4em;
-    font-weight: 600;
-    margin-right: 3em;
+    font-size: 1.1em;
 }
 
 /* footer */
