@@ -25,12 +25,12 @@ p {
     left: 0;
     width: 100%;
     background-color: #fff;
-    padding: 10px 0; /* Updated padding */
+    padding: 0.45em 0; /* Updated padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000; /* Ensure the navbar stays above other content */
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the navbar */
+    box-shadow: 0 0.3em 0.3em rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the navbar */
 }
 
 .logo img {
@@ -46,7 +46,6 @@ p {
 
 .nav-links li {
     display: inline; /* Display the list items inline (inline adalah sebaris ) */
-    margin-right: 20px;
 }
 
 .nav-links li:first-child{
@@ -164,9 +163,9 @@ p {
     flex-wrap: wrap;
     row-gap: 4em;
     column-count: 2;
-    column-gap: 5em;
-    margin-left: 7em;
-    margin-right: 7em;
+    column-gap: 3em;
+    margin-left: 1.5em;
+    margin-right: 2.2em;
 }
 
 .product {
