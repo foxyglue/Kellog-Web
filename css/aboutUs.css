@@ -69,6 +69,33 @@ p {
     font-size: 1.5em;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        z-index: 0;
+        position: relative;
+    }
+    .nav-links li {
+        display: block;
+        text-align: center;
+        margin: 0.3em 0 0 0;
+        padding: 10px 20px;
+    }
+    .nav-links li:first-child, .nav-links li:last-child{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .nav-links li a:hover {
+        color: #e01252;
+        font-size: 1.5em;
+    }
+    .logo img {
+        width: 100%;
+        margin: 0;
+    }
+}
+
 /* Body */
 
 .main-body {
@@ -128,16 +155,7 @@ p {
 
 .hist-img-sub {
     flex: 1;
-    align-items: center;
     margin-left: 5em;
-}
-
-.hist-img img{
-    align-items: center;
-}
-
-.img-sub {
-    align-items: center;
 }
 
 .img-sub p {
@@ -153,6 +171,30 @@ p {
 .subtopic-text li {
     font-family: 'Work Sans', sans-serif;
     font-size: 1.1em;
+}
+
+@media (max-width:768px) {
+    .main-body {
+        margin: 0 4em;
+        background-color: #fff;
+    }
+    .container {
+        max-height: none;
+        height: auto;
+    }
+    #about-us {
+        margin-top: 2em;
+    }
+    .hist-img-sub {
+        margin-left: 2em;
+    }
+    .hist-img-sub img {
+        width: 100%;
+    }
+    .subtopic-text {
+        align-items: center;
+        text-align: justify;
+    }
 }
 
 /* footer */
@@ -222,4 +264,20 @@ p {
     font-family: "Work Sans", sans-serif;
     color: white;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        align-items: center;
+    }
+    .foot-directory {
+        display: none;
+    }.foot-logo img {
+        width: 100%;
+        height: 4em;
+    }
+    .foot-social {
+        width: 100%;
+        text-align: center;
+    }
 }
