@@ -280,4 +280,8 @@ p {
         width: 100%;
         text-align: center;
     }
+    .social-icons {
+        margin: 0 auto;
+        column-gap: 1em;
+    }
 }
