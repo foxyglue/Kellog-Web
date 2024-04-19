@@ -57,7 +57,7 @@ p {
     color:black;
     text-decoration: none;
     transition: color 0.3s ease;
-    padding: 20px; /* Added padding */
+    padding: 1em; /* Added padding */
     margin: 0.2em;
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
