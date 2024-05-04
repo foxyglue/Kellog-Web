@@ -118,6 +118,7 @@ h1 {
     column-gap: 5em;
     margin-left: 7em;
     margin-right: 7em;
+    justify-content: space-between;
 }
 
 .rcp-title {
