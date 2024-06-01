@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VKellogg</title>
+
+    <link rel="icon" href="../resources/VKellogKecil.svg">
+    <link rel="stylesheet" href="../css/contact.css">
+    <script src="../js/contact.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="../resources/VKellog.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="recipe.html">Recipes</a></li>
+            <li><a href="aboutUs.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+
+    <div class = 'contact-us-content'>
+        <div class = 'header-form'>
+            <h1 >Contact us</h1>  
+        </div>
+        <form id = 'form'>
+
+            <ul class = 'row-form'>
+                <li>
+                    <label for="fname">First name</label>
+                    <br>
+                    <input type="text" name="fname" class ="row-form fname">
+                    <small id = 'error_fname'></small>
+                </li>
+                <li>
+                    <label for="lname">Last name</label>
+                    <br>
+                    <input type="text" name="lname" class ="row-form lname">
+                    <small id = 'error_lname'></small>
+                </li>
+            </ul>
+            <ul class = 'row-form'>
+                <li>
+                    <label for="phone">Phone number</label>
+                    <br>
+                    <input type="text" name="phone" class ="row-form phone">
+                    <small id = 'error_phone'> </small>
+                </li>
+                <li>
+                    <label for="email">Email address</label>
+                    <br>
+                    <input type="text" name="email" class ="row-form email" >
+                    <small id = 'error_email'> </small>
+                </li>
+            </ul>
+            <ul class = 'row-form'>
+                <li>
+                    <label for="type">Type</label>
+                    <br>
+                    <select name="type" id="type" >
+                        <option value="general">general</option>
+                        <option value="support">support</option>
+                        <option value="feedback">feedback</option>
+                        <option value="other">other</option>
+                    </select>
+                </li>
+            </ul>
+            <ul class = 'row-form'>
+                <li>
+                    <label for="Description">Description</label>
+                    <br>
+                    <textarea name="desc" id="desc" cols = "50" rows="6"></textarea>
+                    <br>
+                    <small id = 'error_desc'></small>
+                </li>
+                
+            </ul>
+            <ul class = 'row-form'>
+                <li>
+                    <button type = "submit" id = 'submit'>Submit</button>
+                </li>
+            </ul>
+            
+        </form>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="foot-logo">
+            <img src="../resources/VKellog.png" alt="logo">
+        </div>
+        <div class="foot-flex">
+            <div class="foot-social">
+                <h3 style="text-align: center;">Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/kelloggsid/" target="_blank"><img src="../resources/IG.png" alt="instagram"></a>
+                    <a href="https://twitter.com/KelloggsUS" target="_blank"><img src="../resources/twitter.png" alt="twitter"></a>
+                    <a href="https://www.facebook.com/KelloggsID" target="_blank"><img src="../resources/facebook.png" alt="facebook"></a>
+                    <a href="https://www.tiktok.com/@kelloggscerealus?lang=id-ID" target="_blank"><img src="../resources/tiktok.png" alt="youtube"></a>
+                </div>
+            </div>
+            <div class="foot-directory">
+                <div class="foot-home">
+                    <h3><a href="index.html">Home</a></h3>
+                </div>
+                <div class="foot-products">
+                    <h3><a href="product.html">Products</a></h3>
+                    <h4>Kids</h4>
+                    <h4>Adults</h4>
+                </div>
+                <div class="foot-recipes">
+                    <h3><a href="recipe.html">Recipes</a></h3>
+                </div>
+                <div class="foot-about">
+                    <h3><a href="aboutUs.html">About Us</a></h3>
+                    <h4><a href="aboutUs.html">History</a></h4>
+                    <h4><a href="aboutUs.html">Mission</a></h4>
+                </div>
+                <div class="foot-contact">
+                    <h3><a href="contact.html">Contact Us</a></h3>
+                </div>
+            </div>
+        </div>
+        <div class="foot-rights">
+            <p>&copy; 2024 VKellogg Company. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>
