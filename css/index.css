@@ -88,7 +88,7 @@ body {
 .container {
     margin-left: 3em;
     margin-right: 3em;
-    min-height: 150vh;
+    min-height: 82.6vh;
 }
 
 .section-title {
@@ -257,6 +257,7 @@ body {
     margin-left: 10vw;
     font-family: "Work Sans", sans-serif;
 }
+
 
 .foot-directory :last-child{
     margin-right: 2vw;
