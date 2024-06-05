@@ -171,6 +171,7 @@ body {
 #submit:hover{
     background-color: #e01252;
     color: white;
+    cursor: pointer;
 }
 
 textarea{
@@ -184,7 +185,7 @@ textarea{
 
 small{
     padding: 1px;
-    font-size: 0.75em;
+    font-size: 0.75rem;
     color:rgb(255, 23, 23);
 }
 

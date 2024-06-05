@@ -7,7 +7,6 @@
 
     <link rel="icon" href="../resources/VKellogKecil.svg">
     <link rel="stylesheet" href="../css/contact.css">
-    <script src="../js/contact.js"></script>
 </head>
 <body>
     <!-- navbar -->
@@ -26,21 +25,21 @@
 
     <div class = 'contact-us-content'>
         <div class = 'header-form'>
-            <h1 >Contact us</h1>  
+            <h1>Contact us</h1>  
         </div>
-        <form id = 'form'>
+        <form id = 'form' method="post" onsubmit="validateForm(event)">
 
             <ul class = 'row-form'>
                 <li>
                     <label for="fname">First name</label>
                     <br>
-                    <input type="text" name="fname" class ="row-form fname">
+                    <input type="text" name="fname" class ="row-form fname" id="fname">
                     <small id = 'error_fname'></small>
                 </li>
                 <li>
                     <label for="lname">Last name</label>
                     <br>
-                    <input type="text" name="lname" class ="row-form lname">
+                    <input type="text" name="lname" class ="row-form lname" id="lname">
                     <small id = 'error_lname'></small>
                 </li>
             </ul>
@@ -48,14 +47,14 @@
                 <li>
                     <label for="phone">Phone number</label>
                     <br>
-                    <input type="text" name="phone" class ="row-form phone">
-                    <small id = 'error_phone'> </small>
+                    <input type="text" name="phone" class ="row-form phone" id="phone">
+                    <small id = 'error_phone'></small>
                 </li>
                 <li>
                     <label for="email">Email address</label>
                     <br>
-                    <input type="text" name="email" class ="row-form email" >
-                    <small id = 'error_email'> </small>
+                    <input type="text" name="email" class ="row-form email" id="email">
+                    <small id = 'error_email'></small>
                 </li>
             </ul>
             <ul class = 'row-form'>
@@ -82,7 +81,7 @@
             </ul>
             <ul class = 'row-form'>
                 <li>
-                    <button type = "submit" id = 'submit'>Submit</button>
+                    <button type = "button" id = 'submit'>Submit</button>
                 </li>
             </ul>
             
@@ -128,6 +127,7 @@
             <p>&copy; 2024 VKellogg Company. All rights reserved.</p>
         </div>
     </div>
-
+    
+    <script src="../js/contact.js"></script>
 </body>
 </html>

@@ -1,86 +1,74 @@
-function check_email(emailInput, errorObj){
-    const email = emailInput.value.trim();
-    let valid = true;
-
-    if(email === '' || email == null){
-        errorObj.textContent = 'Insert your email !' ;
-        valid = false;
-    }else{
-        if(email.indexOf('@') < 0 && email.indexOf('.') < 0){
-            errorObj.textContent = 'Must include \'@\' and \'.\' !';
-            valid = false;
-        }
-    }
+function validateForm() {
+    const fName = document.getElementById('fname');
+    const lName = document.getElementById('lname');
+    const phone = document.getElementById('phone');
+    const email = document.getElementById('email');
+    const desc = document.getElementById('desc');
+    const error_fname = document.getElementById('error_fname');
+    const error_lname = document.getElementById('error_lname');
+    const error_phone = document.getElementById('error_phone');
+    const error_email = document.getElementById('error_email');
+    const error_desc = document.getElementById('error_desc');
+    const form = document.getElementById('form');
     
-    return valid;
-}
+    let isValid = true;
 
+    // Clear all previous error messages
+    error_fname.innerHTML = "";
+    error_lname.innerHTML = "";
+    error_phone.innerHTML = "";
+    error_email.innerHTML = "";
+    error_desc.innerHTML = "";
 
-function check_phone(phone, error_obj){
-    const phone_input = phone.value.trim();
-    let valid = true;
-
-    if(phone_input === '' || phone_input == null){
-        error_obj.textContent = 'Insert your phone number !';
-        valid = false;
-    }else{  
-        for(let i = 0 ; i<phone_input.length ; i++){
-            if(phone_input.charAt(i) < '0' || phone_input.charAt(i) > '9'){
-                error_obj.textContent = 'Only digit number!';
-                valid = false;
-                break;
-            }
-        }
+    // Validate first name
+    if (fName.value == "") {
+        error_fname.innerHTML = "First Name cannot be empty!";
+        isValid = false;
     }
 
-    return valid;
-}
-
-function check_name(name_input, error_obj, pos){
-    let valid = true;
-    let trimmed_name = name_input.value.trim();
-
-    if(trimmed_name === '' || trimmed_name == null ){
-        error_obj.textContent = 'Insert your ' + pos +' name !' ;
-        valid = false;
-    }else{  
-        for(let i = 0 ; i<trimmed_name.length ; i++){
-            if(trimmed_name.charAt(i) >= '0' && trimmed_name.charAt(i) <= '9'){
-                error_obj.textContent = 'Only alphabetic characters!' ;
-                valid = false;
-                break;
-            }
-        }
+    // Validate last name
+    if (lName.value == "") {
+        error_lname.innerHTML = "Last Name cannot be empty!";
+        isValid = false;
     }
-    return valid;
-}
 
-
-function check_desc(desc_input, error_obj) {
-  let trimmed_desc = desc_input.value.trim();
-  let valid = true;
-
-  if (!trimmed_desc) {
-    error_obj.textContent = 'Insert your description!';
-    valid = false;
-  } else if (trimmed_desc.length < 10) {
-    error_obj.textContent = 'At least 10 characters!';
-    valid = false;
-  }
-
-  return valid;
-}
-
-
-form.addEventListener('submit',(e) => {
-    
-    let email_valid = check_email(document.querySelector('.row-form.email'), document.getElementById('error_email'));
-    let phone_valid = check_phone(document.querySelector('.row-form.phone'), document.getElementById('error_phone'));
-    let fname_valid = check_name(document.querySelector('.row-form.fname'), document.getElementById('error_fname'),'first');
-    let lname_valid = check_name(document.querySelector('.row-form.lname'), document.getElementById('error_lname'),'last');
-    let desc_valid = check_desc(document.getElementById('desc'), document.getElementById('error_desc'));
-
-    if(!email_valid || !phone_valid || !fname_valid || !lname_valid || !desc_valid){
-        e.preventDefault();
+    // Validate phone
+    const phonePattern = /^[0-9]+$/;
+    if (phone.value == "") {
+        error_phone.innerHTML = "Phone cannot be empty!";
+        isValid = false;
+    } else if (!phone.value.match(phonePattern)) {
+        error_phone.innerHTML = "Phone must be numeric!";
+        isValid = false;
+    } else if (phone.value.length < 10) {
+        error_phone.innerHTML = "Phone must be at least 10 digits!";
+        isValid = false;
     }
-});
+
+    // Validate email
+    if (email.value == "") {
+        error_email.innerHTML = "Email cannot be empty!";
+        isValid = false;
+    } else if (!email.value.endsWith("@gmail.com")) {
+        error_email.innerHTML = "Email must end with @gmail.com";
+        isValid = false;
+    }
+
+    // Validate description
+    if (desc.value == "") {
+        error_desc.innerHTML = "Description cannot be empty!";
+        isValid = false;
+    } else if (desc.value.length < 10) {
+        error_desc.innerHTML = "Description must be at least 10 characters!";
+        isValid = false;
+    }
+
+    // If validation passes, submit the form
+    if (isValid) {
+        form.reset();
+        form.submit();
+    }
+}
+
+const btnSubmit = document.getElementById("submit");
+btnSubmit.addEventListener('click', validateForm);
