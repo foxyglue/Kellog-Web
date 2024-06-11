@@ -99,7 +99,7 @@ h1 {
     margin-right: 7em;
     height: auto;
     background-color: #fff;
-    margin-bottom: 5em;
+    margin-bottom: 10em;
 }
 
 .header {
@@ -121,10 +121,33 @@ h1 {
     justify-content: space-between;
 }
 
+.hidden {
+    display: none;
+}
+
 .rcp-title {
     text-align: center;
     margin-top: 3vh;
     margin-bottom: 1em;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em 0;
+}
+
+button{
+    background-color: #e01252;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 150px;
+    font-size: 1.2rem;
 }
 
 @media (max-width:768px) {
