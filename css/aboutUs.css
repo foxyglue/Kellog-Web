@@ -12,8 +12,8 @@ h1 {
 }
 
 p {
-    font-weight: 500;
-    font-size: 1.1em;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .navbar {
@@ -166,6 +166,13 @@ p {
     display: flex;
     justify-content:space-evenly;
     flex-direction: row;
+}
+
+
+#purpose-text {
+    flex-direction: column;
+    padding: 0 6.5em;
+    text-align: center;
 }
 
 .subtopic-text li {
