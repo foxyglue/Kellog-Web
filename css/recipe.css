@@ -131,6 +131,10 @@ h1 {
     margin-bottom: 1em;
 }
 
+.rcp-img img {
+    border-radius: 1em;
+}
+
 .btn{
     display: flex;
     align-items: center;
