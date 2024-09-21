@@ -1,2 +1,5 @@
 # Kellog-Web
-AOL for Human and Computer Interaction course
+Final project for Human and Computer Interaction course
+
+This project use simple HTML, CSS, and Javascript.
+
